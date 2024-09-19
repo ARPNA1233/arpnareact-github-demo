@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Art Salon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #ff66b2;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 2rem;
+            margin: 1rem 0;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .service {
+            margin: 1rem 0;
+        }
+
+        .gallery-images {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .gallery-images img {
+            width: 30%;
+            border-radius: 8px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input, form textarea {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #ff66b2;
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #ff66b2;
+            color: white;
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 1rem;
+        }
+
+        .payment-methods img {
+            width: 50px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nail Art Salon</h1>
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#payment">Payment Methods</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Nail Art</h3>
+            <p>Custom nail art designs tailored to your style. Choose from a variety of designs and colors to express your personality!</p>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-images">
+            <img src="nail1.jpg" alt="Nail Art 1">
+            <img src="nail2.jpg" alt="Nail Art 2">
+            <img src="nail3.jpg" alt="Nail Art 3">
+        </div>
+    </section>
+
+    <section id="payment">
+        <h2>Payment Methods</h2>
+        <p>We accept the following payment methods:</p>
+        <div class="payment-methods">
+            <img src="visa.png" alt="Visa">
+            <img src="mastercard.png" alt="MasterCard">
+            <img src="paypal.png" alt="PayPal">
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Nail Art Salon. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            alert(`Thank you, ${name}! Your message has been sent.`);
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+
+
+
+
